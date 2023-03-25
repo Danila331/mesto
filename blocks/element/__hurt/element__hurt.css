@@ -12,7 +12,7 @@
 .element__hurt:hover{
     opacity: 0.5;
   }
-.element__hurt:hover{
+.element__hurt:active{
   background-image: url(../../../images/Union.jpg);
   opacity: 1;
 }
