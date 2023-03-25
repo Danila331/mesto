@@ -5,10 +5,14 @@
     max-width: 22px;
     cursor: pointer;
     flex-basis: 100%;
-    background: center url(../../../../images/Group.svg) no-repeat;
+    background: center url(../../../images/Group.svg) no-repeat;
     transition: opacity 0.5s ease;
     margin-right: 30px;
 }
 .element__hurt:hover{
     opacity: 0.5;
   }
+.element__hurt:hover{
+  background-image: url(../../../images/Union.jpg);
+  opacity: 1;
+}

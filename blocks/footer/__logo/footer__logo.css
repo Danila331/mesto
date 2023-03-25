@@ -1,15 +1,15 @@
-.footer__logo {
-    margin-top: 67px;
-    min-height: 18px;
-    max-width: 318px;
-    margin-bottom: 60px;
-    justify-content: left;
+.footer__logo{
+  max-width: 318px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #545454;
+  margin: 0;
 }
-@media (max-width: 425px) {
-  .footer__logo {
-    margin-top: 48px;
-    margin-bottom: 36px;
-    max-width: 282px;
-    min-height: 14px;
+
+@media screen and (max-width: 599px){
+  .footer__logo{
+      font-size: 14px;
   }
 }
