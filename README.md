@@ -5,7 +5,7 @@
  ### Технологии:
 **media queries / JavaScript / отзывчивая верстка /CSS grid layout / методология БЭМ(Nested) / работа с Figma**
 
-**ссылка на проект:** 
+**ссылка на проект:** https://danila331.github.io/mesto/
 
 **Figma**
 
