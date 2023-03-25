@@ -1,0 +1,13 @@
+.header__logo {
+    max-width: 142px;
+    max-height: 33px;
+    justify-self: left;
+    vertical-align: bottom;
+    align-self: flex-start;
+}
+@media (max-width: 425px) {
+    .header__logo{
+      max-width: 104px;
+      min-height: 24px;
+    }
+  }

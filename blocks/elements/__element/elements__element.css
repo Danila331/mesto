@@ -1,0 +1,11 @@
+.elements__element {
+    display: block;
+    width: 100%;
+    min-height: 282px;
+    object-fit: cover;
+    cursor: pointer;
+    color: #000000;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+}

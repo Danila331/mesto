@@ -1,0 +1,12 @@
+.page {
+    margin: auto;
+    max-width: 1280px;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    position: relative;
+}
+@media (max-width: 340px) {
+    .page {
+        max-width: 100%;
+        margin: auto;
+    }
+}
