@@ -17,6 +17,7 @@
     .profile{
       grid-template-columns: min-content 1fr minmax(auto, 15%);
       grid-auto-rows: 1fr;
+      margin-bottom: 36px;
     }
   }
   

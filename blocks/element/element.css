@@ -1,9 +1,7 @@
 .element {
     display: block;
-    width: 100%;
     min-height: 282px;
-    object-fit: cover;
-    cursor: pointer;
+    max-height: 361px;
     color: #000000;
     background-color: #FFFFFF;
     border-radius: 10px;

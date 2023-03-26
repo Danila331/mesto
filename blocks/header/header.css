@@ -5,24 +5,11 @@
     max-width: 880px;
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    border-bottom-color: #545454;
+    border-bottom-color: rgba(84, 84, 84, .7);
 }
-@media (max-width: 991px) {
+@media (max-width: 885px) {
     .header{
-      max-width: calc(100% - 27px * 2);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .header{
-      max-width: 100%;
-      padding: 28px 27px 31px;
-    }
-  }
-  @media (max-width: 425px) {
-    .header{
-        max-width: 100%;
-        margin-top: 28px 27px 31px;
-
+      padding: 0 27px 31px;
+      margin-top: 28px;
     }
   }
