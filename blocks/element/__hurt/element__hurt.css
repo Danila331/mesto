@@ -12,6 +12,3 @@
 .element__hurt:hover{
     opacity: 0.5;
   }
-.element__hurt_active{
-  background-image: url(../../../images/Union.jpg);
-}
