@@ -63,8 +63,8 @@ openProfileeditUserButoon.addEventListener('click', () =>{
 let OpenImageCardButton = document.querySelector('.profile__addbutton');
 let PopupAddCard = document.querySelector('.popup_add-card');
 let FormAddCard = document.querySelector('.form_add-card');
-let InputNamePhoto = document.querySelector('.form__input_string_name_photo');
-let InputSrcPhoto = document.querySelector('.form__input_string_src_photo');
+let InputNamePhoto = document.querySelector('.form__input_string_name-photo');
+let InputSrcPhoto = document.querySelector('.form__input_string_src-photo');
 let CardformEditBtn = PopupAddCard.querySelector('.form__input-btn');
 let CardCloseBtn = PopupAddCard.querySelector('.popup__close');
 
