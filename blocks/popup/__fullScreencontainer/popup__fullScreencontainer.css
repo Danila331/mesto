@@ -1,4 +1,4 @@
-.popup_type_fullScreen__container{
+.popup__fullScreencontainer{
     display: flex;
     flex-direction: column;
     justify-content: center;

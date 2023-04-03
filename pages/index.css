@@ -30,6 +30,6 @@
 @import url(../blocks/element/__hurt/_active/element__hurt_active.css);
 @import url(../blocks/element/__button-trash/element__button-trash.css);
 @import url(../blocks/popup/_type/_fullScreen/popup_type_fullScreen.css);
-@import url(../blocks/popup/_type/_fullScreen/__img/popup_type_fullScreen__img.css);
-@import url(../blocks/popup/_type/_fullScreen/__container/popup_type_fullScreen__container.css);
-@import url(../blocks/popup/_type/_fullScreen/__caption/popup_type_fullScreen__caption.css);
+@import url(../blocks/popup/__fullScreencaption/popup__fullScreencaption.css);
+@import url(../blocks/popup/__fullScreencontainer/popup__fullScreencontainer.css);
+@import url(../blocks/popup/__fullScreenimg/popup__fullScreenimg.css);

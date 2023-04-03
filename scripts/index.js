@@ -98,9 +98,9 @@ function Deletecard(event) {
 }
 
 const popupFullScreen = document.querySelector('.popup_type_fullScreen');
-const popupFullScreenClose = document.querySelector('.popup_type_fullScreen__close');
-const elementFullScreenImg = document.querySelector('.popup_type_fullScreen__img');
-const elementFullScreenCaption = document.querySelector('.popup_type_fullScreen__caption');
+const popupFullScreenClose = document.querySelector('.popup__fullScreenclose');
+const elementFullScreenImg = document.querySelector('.popup__fullScreenimg');
+const elementFullScreenCaption = document.querySelector('.popup__fullScreencaption');
 
 function addFullScreenContent(event) {
     const elementImg = event.target.closest('.element__image');
