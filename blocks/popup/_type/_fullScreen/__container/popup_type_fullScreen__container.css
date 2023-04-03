@@ -1,7 +1,8 @@
-.popup-fullScreen__container{
+.popup_type_fullScreen__container{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-self: center;
     align-items: center;
     position: relative;
   }
