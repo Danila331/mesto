@@ -4,7 +4,7 @@ const profileName = document.querySelector('.profile__name');
 const profileJob = document.querySelector('.profile__subtitle');
 const profileEditUserButoon = document.querySelector('.profile__editbutton')
 // форма в popup_edit-user
-const popupProfileEdit = document.querySelector('.popup_edit-user');
+const popupProfileEdit = document.querySelector('.popup_type_edit-user');
 const popupProfileCloseButton = popupProfileEdit.querySelector('.popup__close');
 const nameInput = popupProfileEdit.querySelector('.form__input_string_name');
 const jobInput = popupProfileEdit.querySelector('.form__input_string_job');
@@ -34,7 +34,7 @@ profileEditUserButoon.addEventListener('click', () =>{
 // Блок добавления фотографий
 
 const imageCardButton = document.querySelector('.profile__addbutton');
-const popupAddCard = document.querySelector('.popup_add-card');
+const popupAddCard = document.querySelector('.popup_type_add-card');
 const formAddCard = document.querySelector('.form_add-card');
 const inputNamePhoto = document.querySelector('.form__input_string_name-photo');
 const inputSrcPhoto = document.querySelector('.form__input_string_src-photo');
