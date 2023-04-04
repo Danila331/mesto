@@ -1,30 +1,3 @@
-const initialCards = [
-    {
-      name: 'Архыз',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-    },
-    {
-      name: 'Челябинская область',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-    },
-    {
-      name: 'Иваново',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-    },
-    {
-      name: 'Камчатка',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-    },
-    {
-      name: 'Холмогорский район',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-    },
-    {
-      name: 'Байкал',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-    }
-  ];
-
 // Блок редактирования пользователя
 
 const profileName = document.querySelector('.profile__name');
@@ -36,24 +9,24 @@ const popupProfileCloseButton = popupProfileEdit.querySelector('.popup__close');
 const nameInput = popupProfileEdit.querySelector('.form__input_string_name');
 const jobInput = popupProfileEdit.querySelector('.form__input_string_job');
 const formEdit = popupProfileEdit.querySelector('.form_edit-user');
-function OpenPopupBox(popup) {
+function openPopupBox(popup) {
     popup.classList.add('popup_opened');
 }
 // функция закрыфтия окна редактирования пользователя
-function ClosePopupBox(popup) {
+function closePopupBox(popup) {
     popup.classList.remove('popup_opened');
 }
 // слушаем собятия связаны с окном редактирования пользователя
-popupProfileCloseButton.addEventListener('click', () => {ClosePopupBox(popupProfileEdit)});
+popupProfileCloseButton.addEventListener('click', () => {closePopupBox(popupProfileEdit)});
 
 formEdit.addEventListener('submit', (event)=>{
     event.preventDefault();
     profileName.textContent = nameInput.value;
     profileJob.textContent = jobInput.value;
-    ClosePopupBox(popupProfileEdit);});
+    closePopupBox(popupProfileEdit);});
 
 profileEditUserButoon.addEventListener('click', () =>{
-    OpenPopupBox(popupProfileEdit);
+    openPopupBox(popupProfileEdit);
     nameInput.value = profileName.textContent;
     jobInput.value = profileJob.textContent;
   });
@@ -68,31 +41,30 @@ const inputSrcPhoto = document.querySelector('.form__input_string_src-photo');
 const cardFormEditBtn = popupAddCard.querySelector('.form__input-btn');
 const cardCloseBtn = popupAddCard.querySelector('.popup__close');
 
-imageCardButton.addEventListener('click', () => {OpenPopupBox(popupAddCard)});
+imageCardButton.addEventListener('click', () => {openPopupBox(popupAddCard)});
 
-cardCloseBtn.addEventListener('click', () => {ClosePopupBox(popupAddCard)})
+cardCloseBtn.addEventListener('click', () => {closePopupBox(popupAddCard)})
 
 // Функция добавления карточки 
 formAddCard.addEventListener('submit', (event) => {
     event.preventDefault();
-    const srcImage = inputSrcPhoto.value;
-    const nameImage = inputNamePhoto.value;
-    const dict = {};
-    dict.name = nameImage
-    dict.link = srcImage
-    elements.prepend(CreateCard(dict));
-    ClosePopupBox(popupAddCard)
+    const cardData = {
+      link: inputSrcPhoto.value,
+      name: inputNamePhoto.value
+    };
+    elements.prepend(createCard(cardData));
+    closePopupBox(popupAddCard)
 })
 
 const itemTemplate = document.querySelector('.template').content;
 const elements = document.querySelector('.elements');
 // лайк мусорка и фулл скрин
-function LikeActive(event) {
+function likeActive(event) {
     const eventTarget = event.target;
     eventTarget.classList.toggle('element__hurt_active')
 }
 
-function Deletecard(event) {
+function deletecard(event) {
     const card = event.target.closest('.element')
     card.remove()
 }
@@ -102,37 +74,37 @@ const popupFullScreenClose = document.querySelector('.popup__fullScreenclose');
 const elementFullScreenImg = document.querySelector('.popup__fullScreenimg');
 const elementFullScreenCaption = document.querySelector('.popup__fullScreencaption');
 
-function addFullScreenContent(event) {
+function handleOpenImagePreview(event) {
     const elementImg = event.target.closest('.element__image');
-    OpenPopupBox(popupFullScreen);
+    openPopupBox(popupFullScreen);
     elementFullScreenImg.src = elementImg.src;
     elementFullScreenImg.alt = elementImg.alt;
     elementFullScreenCaption.textContent = elementImg.alt;
 }
 function setEventListeners(htmlElement){
-    htmlElement.querySelector('.element__button-trash').addEventListener('click', Deletecard);
-    htmlElement.querySelector('.element__hurt').addEventListener('click',LikeActive);
-    htmlElement.querySelector('.element__image').addEventListener('click', addFullScreenContent);
+    htmlElement.querySelector('.element__button-trash').addEventListener('click', deletecard);
+    htmlElement.querySelector('.element__hurt').addEventListener('click',likeActive);
+    htmlElement.querySelector('.element__image').addEventListener('click', handleOpenImagePreview);
 }
 
 // функция создания карточки 
-function CreateCard(item) {
-    const htmlElement = itemTemplate.cloneNode(true);
-    const image = htmlElement.querySelector('.element__image');
-    const nameImage = htmlElement.querySelector('.element__header');
+function createCard(item) {
+    const cardElement = itemTemplate.cloneNode(true);
+    const image = cardElement.querySelector('.element__image');
+    const nameImage = cardElement.querySelector('.element__header');
     image.src = item.link;
     image.alt = item.name;
     nameImage.textContent = item.name;
-    setEventListeners(htmlElement);
-    return htmlElement;
+    setEventListeners(cardElement);
+    return cardElement;
 }
 initialCards.forEach(function (item) {
-    const elementCReate = CreateCard(item);
-    elements.prepend(elementCReate);
+    const elementCreate = createCard(item);
+    elements.prepend(elementCreate);
 })
 
 // функция закрытия полного экрана
 
 popupFullScreenClose.addEventListener('click',() =>{
-    ClosePopupBox(popupFullScreen);
+    closePopupBox(popupFullScreen);
 })
